@@ -1,0 +1,1223 @@
+@font-face {
+  font-family: fabfeltscript-bold;
+  src: url("../font/fabfeltscript-bold.woff2"), url("../font/fabfeltscript-bold.woff"), url("../font/fabfeltscript-bold.ttf"), url("../font/fabfeltscript-bold.svg"), url("../font/fabfeltscript-bold.otf"), url("../font/fabfeltscript-bold.eot"); }
+body {
+  font-family: "Open Sans";
+  background-color: #fff; }
+
+input,
+textarea,
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select {
+  font-family: "Open Sans"; }
+
+input,
+textarea,
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select {
+  font-family: "Open Sans"; }
+
+input,
+textarea,
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder,
+select {
+  font-family: "Open Sans"; }
+
+input,
+textarea,
+input::placeholder,
+textarea::placeholder,
+select {
+  font-family: "Open Sans"; }
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: rgba(99, 99, 99, 0.4); }
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: rgba(99, 99, 99, 0.4); }
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: rgba(99, 99, 99, 0.4); }
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(99, 99, 99, 0.4); }
+
+ul {
+  list-style: none; }
+
+.login .left-side .login-form form input[type="submit"], .home .side-menu ul li:hover:after,
+.home .side-menu ul li.active:after, .home .btns-menu a .box, .table .button-add a, .table tbody td .button a, .add .left-side .login-form form label[for="student-image"], .add .left-side .login-form form input[type="submit"],
+.add .left-side .login-form form input .btn-add,
+.add .left-side .login-form form label[for="student-image"][type="submit"],
+.add .left-side .login-form form label[for="student-image"] .btn-add,
+.add .left-side .login-form form select[type="submit"],
+.add .left-side .login-form form select .btn-add, .add .btn-add, .add .select-styled, .add .select-options li, .route .button-reorder a,
+.route .button-add a, .forms .student .select-styled,
+.forms .address-1 .select-styled,
+.forms .address-2 .select-styled, .forms .student .select-options li,
+.forms .address-1 .select-options li,
+.forms .address-2 .select-options li, .forms input[type="submit"],
+.forms button, .forms .submit input {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+/********************************
+********** Login ***************/
+.login .container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%; }
+  .login .container .row {
+    padding: 0;
+    margin: 0; }
+    .login .container .row .col-6 {
+      margin: 0;
+      padding: 0; }
+.login .right-side {
+  background: url("../img/bg.png") no-repeat center center/cover;
+  background-size: cover;
+  height: 100vh;
+  position: relative; }
+  .login .right-side .logo-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .login .right-side .logo-heading .heading {
+      font-family: fabfeltscript-bold;
+      color: #fff;
+      padding-top: 10px; }
+.login .left-side {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .login .left-side .login-form {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    width: 80%; }
+    .login .left-side .login-form h2 {
+      font-weight: normal;
+      font-size: 20px;
+      color: #636363;
+      margin-bottom: 50px; }
+    .login .left-side .login-form form input {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-radius: 35px;
+      margin-bottom: 25px;
+      -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      color: #000;
+      padding-left: 20px; }
+      .login .left-side .login-form form input:focus {
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        outline: none;
+        border-color: #6bad1a;
+        -webkit-box-shadow: 0px 8px 15px rgba(107, 173, 26, 0.4);
+                box-shadow: 0px 8px 15px rgba(107, 173, 26, 0.4); }
+      .login .left-side .login-form form input[type="submit"] {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        background: #6bad1a;
+        color: #fff;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        font-weight: 600;
+        font-size: 20px;
+        border-color: transparent;
+        letter-spacing: -1px; }
+        .login .left-side .login-form form input[type="submit"]:hover {
+          color: #6bad1a;
+          background: #fff;
+          border-color: #6bad1a; }
+
+@media (max-width: 767px) {
+  .login-page {
+    background: url("../img/bg.png") no-repeat center center/cover;
+    height: 100vh; }
+
+  .login .col-6:first-child {
+    display: none; }
+
+  .login .left-side:after {
+    content: "";
+    background: url(../img/logo.png) no-repeat center center;
+    position: absolute;
+    width: 100%;
+    height: 240px;
+    top: 10px;
+    background-size: 150px; }
+
+  .login .left-side .login-form {
+    -webkit-transform: translate(50%, 70%);
+            transform: translate(50%, 70%);
+    width: 100%; }
+
+  .login .left-side .login-form h2 {
+    color: #fff;
+    text-align: center; }
+
+  .login .left-side .login-form form input[type="submit"] {
+    background: #272727;
+    width: 100%;
+    margin: 0 auto; }
+
+  .login .left-side .login-form form input:focus {
+    border-color: #272727;
+    -webkit-box-shadow: 0px 8px 15px rgba(39, 39, 39, 0.4);
+            box-shadow: 0px 8px 15px rgba(39, 39, 39, 0.4); } }
+/*********************************************************************************/
+/*************************
+********** Home *****************/
+.home .side-menu img {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px; }
+.home .side-menu .main-menu:hover,
+.home .side-menu nav.main-menu.expanded {
+  width: 200px;
+  overflow: visible; }
+.home .side-menu .main-menu {
+  background: #272727;
+  border-right: 3px solid #6bad1a;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 60px;
+  overflow: hidden;
+  -webkit-transition: width .05s linear;
+  transition: width .05s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  z-index: 1000; }
+.home .side-menu .main-menu > ul {
+  margin: 0px 0;
+  padding: 0; }
+.home .side-menu .main-menu li {
+  position: relative;
+  display: block;
+  width: 200px;
+  padding: 15px 0; }
+.home .side-menu .main-menu li > a {
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #999;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear; }
+.home .side-menu .main-menu .nav-icon {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px; }
+.home .side-menu .main-menu .nav-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 200px;
+  text-align: left;
+  padding-left: 15px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 2;
+  text-transform: uppercase; }
+.home .side-menu .main-menu > ul.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+.home .side-menu .no-touch .scrollable.hover {
+  overflow-y: hidden; }
+.home .side-menu .no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible; }
+.home .side-menu a:hover,
+.home .side-menu a:focus {
+  text-decoration: none; }
+.home .side-menu nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+.home .side-menu nav ul,
+.home .side-menu nav li {
+  position: relative;
+  outline: 0;
+  margin: 0;
+  padding: 0; }
+.home .side-menu .main-menu li:hover > a,
+.home .side-menu nav.main-menu li.active > a,
+.home .side-menu .dropdown-menu > li > a:hover,
+.home .side-menu .dropdown-menu > li > a:focus,
+.home .side-menu .dropdown-menu > .active > a,
+.home .side-menu .dropdown-menu > .active > a:hover,
+.home .side-menu .dropdown-menu > .active > a:focus,
+.home .side-menu .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+.home .side-menu .dashboard-page nav.dashboard-menu ul li.active a {
+  color: #fff; }
+.home .side-menu .area {
+  float: left;
+  background: #e2e2e2;
+  width: 100%;
+  height: 100%; }
+.home .side-menu ul li:hover:after,
+.home .side-menu ul li.active:after {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #6bad1a;
+  position: absolute;
+  left: 0;
+  top: 0; }
+.home .side-menu ul li:hover,
+.home .side-menu ul li.active {
+  background: rgba(138, 138, 138, 0.4); }
+.home .btns-menu {
+  overflow: hidden;
+  float: right;
+  width: 100%;
+  padding: 50px 0; }
+  .home .btns-menu .container {
+    margin-right: 6%; }
+  .home .btns-menu a {
+    color: #fff;
+    text-transform: uppercase; }
+    .home .btns-menu a .box {
+      background: #272727;
+      border-radius: 15px;
+      height: 250px;
+      position: relative;
+      margin-bottom: 30px;
+      -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+      .home .btns-menu a .box:hover {
+        -webkit-box-shadow: 0 14px 28px rgba(107, 173, 26, 0.4), 0 10px 10px rgba(107, 173, 26, 0.4);
+                box-shadow: 0 14px 28px rgba(107, 173, 26, 0.4), 0 10px 10px rgba(107, 173, 26, 0.4);
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        background: #6bad1a; }
+        .home .btns-menu a .box:hover .logo {
+          -webkit-transform: rotate(10deg);
+                  transform: rotate(10deg); }
+      .home .btns-menu a .box .logo-heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+        .home .btns-menu a .box .logo-heading .logo img {
+          width: 100px;
+          margin-bottom: 20px; }
+
+@media (max-width: 1024px) {
+  .home .btns-menu a .box {
+    width: 80%;
+    float: right; } }
+/*********************************************************************************/
+/*************************
+********** Header *****************/
+.header {
+  background: #272727; }
+  .header p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 0;
+    text-transform: uppercase;
+    padding-left: 60px;
+    padding-top: 18px; }
+  .header .img img {
+    width: 65px;
+    padding: 7px 0; }
+  .header a {
+    text-decoration: none; }
+  .header .logout,
+  .header .setting {
+    width: 25px;
+    padding-top: 28px;
+    margin-right: 20px; }
+    .header .logout.logout,
+    .header .setting.logout {
+      margin-right: 0; }
+
+/*********************************************************************************
+************************** Table *********************************/
+.table {
+  margin: 50px 0;
+  position: relative; }
+  .table .button-add a {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #6bad1a;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 50%; }
+    .table .button-add a:hover {
+      opacity: .8; }
+    .table .button-add a:after {
+      content: '';
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      -webkit-transform: translate(50%, -50%);
+              transform: translate(50%, -50%);
+      background: url("../img/add.png") no-repeat center center; }
+  .table ul,
+  .table li {
+    margin: 0;
+    padding: 0; }
+  .table #cd-table .cd-unchecked span,
+  .table #cd-table .cd-checked span {
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap; }
+  .table #cd-table {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    margin: 1em auto;
+    font-size: 14px;
+    font-size: 0.875rem;
+    /* you may remove this border in case of dark backgrounds if it's annoying */
+    border-right: 1px solid #e6e7f1;
+    border-radius: 10px; }
+  .table #cd-table::after {
+    /* clearfix */
+    content: '';
+    display: table;
+    clear: both; }
+  .table #cd-table::before {
+    /* White color gradient on the right */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1px;
+    height: 100%;
+    width: 35px;
+    background: -webkit-gradient(linear, right top, left top, color-stop(10%, white), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to left, white 10%, rgba(255, 255, 255, 0));
+    z-index: 5;
+    pointer-events: none; }
+  .table .no-cssgradients #cd-table::before {
+    /* remove the gradient using modernizr if css gradients are not supported */
+    display: none; }
+  .table #cd-table.table-end::before {
+    /* the gradient disappears when user is at the end of the table */
+    display: none; }
+  .table #cd-table .cd-table-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    /* smooth scrolling on touch devices */
+    -webkit-overflow-scrolling: touch; }
+  .table #cd-table .cd-table-wrapper {
+    width: 100%;
+    padding-left: 60px; }
+  .table #cd-table .cd-scroll-right {
+    /* small right arrow that indicates it's possible to scroll right */
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -8px;
+    z-index: 6;
+    -webkit-animation: cd-scroll-right 1.5s infinite;
+    animation: cd-scroll-right 1.5s infinite; }
+  @media only screen and (min-width: 870px) {
+    .table #cd-table {
+      margin: 2em auto;
+      border-right: none; }
+    .table #cd-table::before {
+      display: none; }
+    .table #cd-table .cd-scroll-right {
+      display: none; } }
+  @media only screen and (min-width: 1170px) {
+    .table #cd-table {
+      margin: 4em auto; } }
+@-webkit-keyframes cd-scroll-right {
+  0%,
+        100% {
+    -webkit-transform: translateX(0); }
+  50% {
+    -webkit-transform: translateX(3px); } }
+@keyframes cd-scroll-right {
+  0%,
+        100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px); } }
+  .table thead {
+    background: #272727;
+    color: #fff; }
+  .table tbody tr th,
+  .table tbody tr td:nth-child(1),
+  .table tbody tr td:nth-child(2),
+  .table tbody tr td:nth-child(4),
+  .table tbody tr td:nth-child(5),
+  .table tbody tr td:nth-child(6) {
+    line-height: 98px; }
+  .table tbody tr th,
+  .table tbody tr td {
+    font-weight: 600; }
+  .table tbody td .button:nth-child(1) {
+    margin: 15px 0 25px 0; }
+  .table tbody td .button a {
+    text-decoration: none;
+    background: #6bad1a;
+    padding: 6px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    width: 100%; }
+    .table tbody td .button a:hover {
+      opacity: .8; }
+
+/*********************************************************************************
+************************** Add *********************************/
+.add {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  .add .left-side {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    .add .left-side .login-form {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      -webkit-transform: translate(50%, -50%);
+              transform: translate(50%, -50%);
+      width: 80%; }
+      .add .left-side .login-form h2 {
+        font-weight: normal;
+        font-size: 20px;
+        color: #636363;
+        margin-bottom: 50px; }
+      .add .left-side .login-form form label[for="student-image"] {
+        background: #272727 !important;
+        color: #fff !important;
+        text-align: center;
+        cursor: pointer; }
+        .add .left-side .login-form form label[for="student-image"] img {
+          width: 28px;
+          margin-right: 10px; }
+        .add .left-side .login-form form label[for="student-image"]:hover {
+          background-color: #4f4f4f !important; }
+      .add .left-side .login-form form input,
+      .add .left-side .login-form form label[for="student-image"],
+      .add .left-side .login-form form select {
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-radius: 35px;
+        margin-bottom: 25px;
+        background: #f7f7f7;
+        -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        color: #000;
+        padding-left: 20px; }
+        .add .left-side .login-form form input[type="file"],
+        .add .left-side .login-form form label[for="student-image"][type="file"],
+        .add .left-side .login-form form select[type="file"] {
+          display: none; }
+        .add .left-side .login-form form input:focus,
+        .add .left-side .login-form form label[for="student-image"]:focus,
+        .add .left-side .login-form form select:focus {
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          outline: none;
+          border-color: #6bad1a;
+          -webkit-box-shadow: 0px 8px 15px rgba(107, 173, 26, 0.4);
+                  box-shadow: 0px 8px 15px rgba(107, 173, 26, 0.4); }
+        .add .left-side .login-form form input[type="submit"],
+        .add .left-side .login-form form input .btn-add,
+        .add .left-side .login-form form label[for="student-image"][type="submit"],
+        .add .left-side .login-form form label[for="student-image"] .btn-add,
+        .add .left-side .login-form form select[type="submit"],
+        .add .left-side .login-form form select .btn-add {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+          text-align: center;
+          background: #6bad1a;
+          color: #fff;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          font-weight: 600;
+          font-size: 20px;
+          border-color: transparent;
+          letter-spacing: -1px; }
+          .add .left-side .login-form form input[type="submit"]:hover,
+          .add .left-side .login-form form input .btn-add:hover,
+          .add .left-side .login-form form label[for="student-image"][type="submit"]:hover,
+          .add .left-side .login-form form label[for="student-image"] .btn-add:hover,
+          .add .left-side .login-form form select[type="submit"]:hover,
+          .add .left-side .login-form form select .btn-add:hover {
+            color: #6bad1a;
+            background: #fff;
+            border-color: #6bad1a; }
+  .add .btn-add {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 35px;
+    margin-bottom: 25px;
+    background: #6bad1a;
+    color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-weight: 600;
+    font-size: 20px;
+    border-color: transparent;
+    letter-spacing: -1px; }
+    .add .btn-add:hover {
+      color: #6bad1a;
+      background: #fff;
+      border-color: #6bad1a;
+      border-style: solid; }
+    .add .btn-add:focus, .add .btn-add:active {
+      outline: none; }
+  .add .select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px; }
+  .add .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    height: 60px; }
+  .add .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #f7f7f7;
+    -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    color: #636363;
+    text-transform: uppercase;
+    border-radius: 36px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    line-height: 43px;
+    padding: 8px 15px; }
+    .add .select-styled:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-color: #636363 transparent transparent transparent;
+      position: absolute;
+      top: 26px;
+      right: 10px; }
+    .add .select-styled:hover {
+      background-color: #66a419;
+      color: #fff;
+      border: none; }
+    .add .select-styled:active, .add .select-styled.active {
+      background-color: #66a419;
+      color: #fff; }
+      .add .select-styled:active:after, .add .select-styled.active:after {
+        top: 20px;
+        border-color: transparent transparent #fff transparent; }
+  .add .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    width: 98%;
+    border-radius: 6px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    background-color: #eaeaea;
+    border: 2px solid #636363; }
+    .add .select-options li {
+      margin: 0;
+      padding: 12px 0;
+      text-indent: 15px;
+      color: #000;
+      border-top: 1px solid #4a4a4a; }
+      .add .select-options li:nth-child(2) {
+        border-top: none !important; }
+      .add .select-options li:hover {
+        color: #fff;
+        background: #636363; }
+      .add .select-options li[rel="hide"] {
+        display: none; }
+
+/*********************************************************************************
+************************** route *********************************/
+.route {
+  position: relative; }
+  .route .buttons {
+    position: relative; }
+    .route .buttons .button-item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .route .button-reorder,
+  .route .button-add {
+    margin: 20px 0; }
+    .route .button-reorder a,
+    .route .button-add a {
+      width: 216px;
+      text-align: center;
+      height: 50px;
+      color: #fff;
+      line-height: 35px;
+      background: #6bad1a;
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+              box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+      border-radius: 45px; }
+      .route .button-reorder a:hover,
+      .route .button-add a:hover {
+        background: #272727;
+        color: #fff; }
+  .route .container {
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 60px;
+    margin-right: 0;
+    padding-right: 0; }
+    .route .container .row {
+      margin: 0;
+      padding: 0; }
+    .route .container .col {
+      padding: 0 !important;
+      margin: 0 !important; }
+  .route .cd-table-wrapper {
+    width: 100% !important;
+    max-width: 100%;
+    padding-left: 0 !important; }
+  .route .table {
+    margin: 0 !important; }
+    .route .table #cd-table {
+      margin: 0 !important; }
+
+/*********************************************************************************
+************************** Footer *********************************/
+.footer {
+  background: #272727;
+  color: #fff;
+  height: 100px; }
+  .footer .img {
+    line-height: 100px; }
+    .footer .img img {
+      padding-left: 80px; }
+  .footer p {
+    font-size: 14px;
+    margin-top: 43px; }
+    .footer p span {
+      font-weight: bold; }
+
+/***********************************
+************** Forms ****************/
+.forms {
+  padding-top: 20px; }
+  .forms .family-id,
+  .forms .father,
+  .forms .address-1,
+  .forms .comments,
+  .forms .submit {
+    margin-bottom: 10px; }
+  
+  .forms h2 {
+    font-weight: 600;
+    position: relative; }
+    .forms h2::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #6bad1a; }
+  .forms .family-id,
+  .forms .father,
+  .forms .mother,
+  .forms .student,
+  .forms .address-1,
+  .forms .address-2,
+  .forms .comments {
+    /* form starting stylings ------------------------------- */
+    /* LABEL ======================================= */
+    /* active state */
+    /* BOTTOM BARS ================================= */
+    /* active state */
+    /* HIGHLIGHTER ================================== */
+    /* active state */
+    /* ANIMATIONS ================ */
+    /* Include this to make it visible when input is clicked */ }
+    .forms .family-id .group,
+    .forms .father .group,
+    .forms .mother .group,
+    .forms .student .group,
+    .forms .address-1 .group,
+    .forms .address-2 .group,
+    .forms .comments .group {
+      position: relative;
+      margin-bottom: 0px;
+      margin-top: 50px; }
+    .forms .family-id input,
+    .forms .family-id select,
+    .forms .father input,
+    .forms .father select,
+    .forms .mother input,
+    .forms .mother select,
+    .forms .student input,
+    .forms .student select,
+    .forms .address-1 input,
+    .forms .address-1 select,
+    .forms .address-2 input,
+    .forms .address-2 select,
+    .forms .comments input,
+    .forms .comments select {
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #6bad1a; }
+    .forms .family-id input:focus,
+    .forms .father input:focus,
+    .forms .mother input:focus,
+    .forms .student input:focus,
+    .forms .address-1 input:focus,
+    .forms .address-2 input:focus,
+    .forms .comments input:focus {
+      outline: none; }
+    .forms .family-id label,
+    .forms .father label,
+    .forms .mother label,
+    .forms .student label,
+    .forms .address-1 label,
+    .forms .address-2 label,
+    .forms .comments label {
+      color: #999;
+      font-size: 18px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all; }
+    #req:before{
+        content:"*" ;
+     color:red  
+    }
+    .forms .family-id input:focus ~ label,
+    .forms .family-id input:valid ~ label,
+    .forms .father input:focus ~ label,
+    .forms .father input:valid ~ label,
+    .forms .mother input:focus ~ label,
+    .forms .mother input:valid ~ label,
+    .forms .student input:focus ~ label,
+    .forms .student input:valid ~ label,
+    .forms .address-1 input:focus ~ label,
+    .forms .address-1 input:valid ~ label,
+    .forms .address-2 input:focus ~ label,
+    .forms .address-2 input:valid ~ label,
+    .forms .comments input:focus ~ label,
+    .forms .comments input:valid ~ label {
+      top: -20px;
+      font-size: 14px;
+      color: #6bad1a; }
+    .forms .family-id .bar,
+    .forms .father .bar,
+    .forms .mother .bar,
+    .forms .student .bar,
+    .forms .address-1 .bar,
+    .forms .address-2 .bar,
+    .forms .comments .bar {
+      position: relative;
+      display: block;
+      width: 100%;
+      top: 1px; }
+    .forms .family-id .bar:before,
+    .forms .family-id .bar:after,
+    .forms .father .bar:before,
+    .forms .father .bar:after,
+    .forms .mother .bar:before,
+    .forms .mother .bar:after,
+    .forms .student .bar:before,
+    .forms .student .bar:after,
+    .forms .address-1 .bar:before,
+    .forms .address-1 .bar:after,
+    .forms .address-2 .bar:before,
+    .forms .address-2 .bar:after,
+    .forms .comments .bar:before,
+    .forms .comments .bar:after {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      background: #6bad1a;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all; }
+    .forms .family-id .bar:before,
+    .forms .father .bar:before,
+    .forms .mother .bar:before,
+    .forms .student .bar:before,
+    .forms .address-1 .bar:before,
+    .forms .address-2 .bar:before,
+    .forms .comments .bar:before {
+      left: 50%; }
+    .forms .family-id .bar:after,
+    .forms .father .bar:after,
+    .forms .mother .bar:after,
+    .forms .student .bar:after,
+    .forms .address-1 .bar:after,
+    .forms .address-2 .bar:after,
+    .forms .comments .bar:after {
+      right: 50%; }
+    .forms .family-id input:focus ~ .bar:before,
+    .forms .family-id input:focus ~ .bar:after,
+    .forms .father input:focus ~ .bar:before,
+    .forms .father input:focus ~ .bar:after,
+    .forms .mother input:focus ~ .bar:before,
+    .forms .mother input:focus ~ .bar:after,
+    .forms .student input:focus ~ .bar:before,
+    .forms .student input:focus ~ .bar:after,
+    .forms .address-1 input:focus ~ .bar:before,
+    .forms .address-1 input:focus ~ .bar:after,
+    .forms .address-2 input:focus ~ .bar:before,
+    .forms .address-2 input:focus ~ .bar:after,
+    .forms .comments input:focus ~ .bar:before,
+    .forms .comments input:focus ~ .bar:after {
+      width: 50%; }
+    .forms .family-id .highlight,
+    .forms .father .highlight,
+    .forms .mother .highlight,
+    .forms .student .highlight,
+    .forms .address-1 .highlight,
+    .forms .address-2 .highlight,
+    .forms .comments .highlight {
+      position: absolute;
+      height: 60%;
+      width: 100px;
+      top: 25%;
+      left: 0;
+      pointer-events: none;
+      opacity: 0.5; }
+    .forms .family-id input:focus ~ .highlight,
+    .forms .father input:focus ~ .highlight,
+    .forms .mother input:focus ~ .highlight,
+    .forms .student input:focus ~ .highlight,
+    .forms .address-1 input:focus ~ .highlight,
+    .forms .address-2 input:focus ~ .highlight,
+    .forms .comments input:focus ~ .highlight {
+      -webkit-animation: inputHighlighter 0.3s ease;
+      animation: inputHighlighter 0.3s ease; }
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #6bad1a; }
+  to {
+    width: 0;
+    background: transparent; } }
+@keyframes inputHighlighter {
+  from {
+    background: #6bad1a; }
+  to {
+    width: 0;
+    background: transparent; } }
+    .forms .family-id input::-webkit-datetime-edit,
+    .forms .family-id input::-ms-datetime-edit,
+    .forms .family-id input::-o-datetime-edit,
+    .forms .father input::-webkit-datetime-edit,
+    .forms .father input::-ms-datetime-edit,
+    .forms .father input::-o-datetime-edit,
+    .forms .mother input::-webkit-datetime-edit,
+    .forms .mother input::-ms-datetime-edit,
+    .forms .mother input::-o-datetime-edit,
+    .forms .student input::-webkit-datetime-edit,
+    .forms .student input::-ms-datetime-edit,
+    .forms .student input::-o-datetime-edit,
+    .forms .address-1 input::-webkit-datetime-edit,
+    .forms .address-1 input::-ms-datetime-edit,
+    .forms .address-1 input::-o-datetime-edit,
+    .forms .address-2 input::-webkit-datetime-edit,
+    .forms .address-2 input::-ms-datetime-edit,
+    .forms .address-2 input::-o-datetime-edit,
+    .forms .comments input::-webkit-datetime-edit,
+    .forms .comments input::-ms-datetime-edit,
+    .forms .comments input::-o-datetime-edit {
+      color: transparent; }
+    .forms .family-id input:focus::-webkit-datetime-edit,
+    .forms .family-id input:focus::-ms-datetime-edit,
+    .forms .family-id input:focus::-o-datetime-edit,
+    .forms .father input:focus::-webkit-datetime-edit,
+    .forms .father input:focus::-ms-datetime-edit,
+    .forms .father input:focus::-o-datetime-edit,
+    .forms .mother input:focus::-webkit-datetime-edit,
+    .forms .mother input:focus::-ms-datetime-edit,
+    .forms .mother input:focus::-o-datetime-edit,
+    .forms .student input:focus::-webkit-datetime-edit,
+    .forms .student input:focus::-ms-datetime-edit,
+    .forms .student input:focus::-o-datetime-edit,
+    .forms .address-1 input:focus::-webkit-datetime-edit,
+    .forms .address-1 input:focus::-ms-datetime-edit,
+    .forms .address-1 input:focus::-o-datetime-edit,
+    .forms .address-2 input:focus::-webkit-datetime-edit,
+    .forms .address-2 input:focus::-ms-datetime-edit,
+    .forms .address-2 input:focus::-o-datetime-edit,
+    .forms .comments input:focus::-webkit-datetime-edit,
+    .forms .comments input:focus::-ms-datetime-edit,
+    .forms .comments input:focus::-o-datetime-edit {
+      color: #000; }
+  .forms .primary-email,
+  .forms .route {
+    margin: 50px 0 50px;
+    padding: 25px 25px 25px 35px;
+    border: 2px solid #6bad1a;
+    line-height: 34px;
+    /* Checked */
+    /* Transition */ }
+    .forms .primary-email h2,
+    .forms .route h2 {
+      margin: 0; }
+      .forms .primary-email h2::after,
+      .forms .route h2::after {
+        display: none; }
+    .forms .primary-email input[type="checkbox"],
+    .forms .primary-email input[type="radio"],
+    .forms .route input[type="checkbox"],
+    .forms .route input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      z-index: -1; }
+    .forms .primary-email label,
+    .forms .route label {
+      position: relative;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding-left: 30px;
+      padding-right: 10px;
+      line-height: 36px;
+      cursor: pointer; }
+    .forms .primary-email label::before,
+    .forms .route label::before {
+      content: " ";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      display: block;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #6bad1a;
+      border-radius: 4px;
+      z-index: -1; }
+    .forms .primary-email input[type="radio"] + label::before,
+    .forms .route input[type="radio"] + label::before {
+      border-radius: 18px; }
+    .forms .primary-email input[type="checkbox"]:checked + label,
+    .forms .primary-email input[type="radio"]:checked + label,
+    .forms .route input[type="checkbox"]:checked + label,
+    .forms .route input[type="radio"]:checked + label {
+      padding-left: 10px;
+      color: #fff; }
+    .forms .primary-email input[type="checkbox"]:checked + label::before,
+    .forms .primary-email input[type="radio"]:checked + label::before,
+    .forms .route input[type="checkbox"]:checked + label::before,
+    .forms .route input[type="radio"]:checked + label::before {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #6bad1a; }
+    .forms .primary-email label,
+    .forms .primary-email label::before,
+    .forms .route label,
+    .forms .route label::before {
+      -webkit-transition: .25s all ease;
+      transition: .25s all ease; }
+  .forms .student .select-hidden,
+  .forms .address-1 .select-hidden,
+  .forms .address-2 .select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px; }
+  .forms .student .select,
+  .forms .address-1 .select,
+  .forms .address-2 .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    height: 60px;
+    margin-top: 18px; }
+  .forms .student .select-styled,
+  .forms .address-1 .select-styled,
+  .forms .address-2 .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    /* -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); */
+    /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); */
+    color: #a9a19b;
+    /* text-transform: uppercase; */
+    /* border-radius: 36px; */
+    border-bottom: 1px solid #8e8e8e;
+    line-height: 43px;
+    padding: 8px 10px; }
+    .forms .student .select-styled:after,
+    .forms .address-1 .select-styled:after,
+    .forms .address-2 .select-styled:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-color: #636363 transparent transparent transparent;
+      position: absolute;
+      top: 26px;
+      right: 10px; }
+    .forms .student .select-styled:hover,
+    .forms .address-1 .select-styled:hover,
+    .forms .address-2 .select-styled:hover {
+      background-color: #66a419;
+      color: #fff;
+      border: none; }
+    .forms .student .select-styled:active, .forms .student .select-styled.active,
+    .forms .address-1 .select-styled:active,
+    .forms .address-1 .select-styled.active,
+    .forms .address-2 .select-styled:active,
+    .forms .address-2 .select-styled.active {
+      background-color: #66a419;
+      color: #fff; }
+      .forms .student .select-styled:active:after, .forms .student .select-styled.active:after,
+      .forms .address-1 .select-styled:active:after,
+      .forms .address-1 .select-styled.active:after,
+      .forms .address-2 .select-styled:active:after,
+      .forms .address-2 .select-styled.active:after {
+        top: 20px;
+        border-color: transparent transparent #fff transparent; }
+  .forms .student .select-options,
+  .forms .address-1 .select-options,
+  .forms .address-2 .select-options {
+    display: none;
+    position: absolute;
+    overflow: scroll;
+    max-height: 200px;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    /* border-radius: 6px; */
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    background-color: #eaeaea;
+    /* border: 2px solid #636363; */ }
+    .forms .student .select-options li,
+    .forms .address-1 .select-options li,
+    .forms .address-2 .select-options li {
+      margin: 0;
+      padding: 12px 0;
+            
+
+      text-indent: 15px;
+      color: #000;
+      border-top: 1px solid #4a4a4a; }
+      .forms .student .select-options li:nth-child(2),
+      .forms .address-1 .select-options li:nth-child(2),
+      .forms .address-2 .select-options li:nth-child(2) {
+        border-top: none !important; }
+      .forms .student .select-options li:hover,
+      .forms .address-1 .select-options li:hover,
+      .forms .address-2 .select-options li:hover {
+        color: #fff;
+        background: #6bad1a; }
+      .forms .student .select-options li[rel="hide"],
+      .forms .address-1 .select-options li[rel="hide"],
+      .forms .address-2 .select-options li[rel="hide"] {
+        display: none; }
+  .forms input[type="submit"],
+  .forms button {
+    margin-top: 100px;
+    background: #6bad1a;
+    color: #fff;
+    font-weight: 600;
+    font-size: 26px;
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0; }
+    .forms input[type="submit"]:hover,
+    .forms button:hover {
+      background: #457110; }
+  .forms .submit input {
+    margin-top: 100px;
+    background: #6bad1a;
+    color: #fff;
+    font-weight: 600;
+    font-size: 26px;
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0;
+    padding: 10px 0;
+    border: none; }
+    .forms .submit input:hover {
+      background: #457110; }
+
+/*# sourceMappingURL=style.css.map */
