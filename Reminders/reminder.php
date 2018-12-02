@@ -25,9 +25,45 @@ $user_id = $_SESSION['user_id'];
                width: 100%;
             }
             
+              html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .controls {
+        background-color: #fff;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        height: 29px;
+        margin-left: 17px;
+        margin-top: 10px;
+        outline: none;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      .controls:focus {
+        border-color: #4d90fe;
+      }
+      .title {
+        font-weight: bold;
+      }
+      #infowindow-content {
+        display: none;
+      }
+      #map #infowindow-content {
+        display: inline;
+      }
+            
         
         </style>
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA40FQ3bNtkaD5jf-Ir812aW8Czg4_GA58&libraries=drawing, geometry"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA40FQ3bNtkaD5jf-Ir812aW8Czg4_GA58&libraries=drawing, geometry,places"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
@@ -60,9 +96,14 @@ $user_id = $_SESSION['user_id'];
         <!-- Side Menu -->
         
     </section>
-  
+     <input id="pac-input" class="controls" type="text"
+        placeholder="Enter a location">
           <div id="map"></div>
-         
+          <div id="infowindow-content">
+      <span id="place-name"  class="title"></span><br>
+      <span id="place-id"></span><br>
+      <span id="place-address"></span>
+    </div>
           <script>
         
         var map;
@@ -71,7 +112,7 @@ $user_id = $_SESSION['user_id'];
            function initMap() {
                   map = new google.maps.Map(document.getElementById('map'), {
                   center: {lat: 30.044281, lng: 31.340002},
-                  zoom: 16,
+                  zoom: 15,
                   disableDoubleClickZoom: true // disable the default map zoom on double click
                  });
                  
@@ -82,12 +123,11 @@ $user_id = $_SESSION['user_id'];
                     
                     if(markersArray.length>0){
                         for (var i = 0; i < markersArray.length; i++ ) {
-    markersArray[i].setMap(null);
+                        markersArray[i].setMap(null);
   }
-  markersArray.length = 0;
+                        markersArray.length = 0;
                     }
                     
-                  // document.getElementById('pickup_addresslat').value = event.latLng.lat()+', '+event.latLng.lng();
                    
                    document.getElementById('pickup_addresslat').value = event.latLng.lat();
                    
@@ -108,6 +148,40 @@ $user_id = $_SESSION['user_id'];
                     markersArray.push(marker);
                         map.setCenter(pos);
                 });
+                
+                var input = document.getElementById('pac-input');
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+     
+
+        autocomplete.addListener('place_changed', function() {
+          //infowindow.close();
+          var place = autocomplete.getPlace();
+          if (!place.geometry) {
+            return;
+          }
+
+          if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+          } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);
+          }
+document.getElementById('details').value = place.formatted_address;
+document.getElementById('place').value = place.name;
+        
+        });
+                
+                
+                
+                
+                
+                
+                
                 
            }
                  
@@ -133,6 +207,10 @@ $user_id = $_SESSION['user_id'];
                 
                 <input type="hidden" id="pickup_addresslng" name="pickup_addresslng" value="" class="form-control" placeholder="lng" required>
             </div>
+            
+            
+                
+         
               <div class="address-1">
                    <div class="row">
                        <div class="col-6"><h2>Reminder Description</h2></div>
@@ -149,8 +227,30 @@ $user_id = $_SESSION['user_id'];
                         </div> 
             
                     </div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+            
+                   <div class="row">
+                         <div class="col-6">
+                   <div class="group">
+             <input  id="details" name="details" value="" class="form-control"  required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label id="req">Address Details</label>
+                            </div>
+                   </div>
                                  </div>
                   
+                  
+
+                   </div>
                 <!-- Submit -->
                 <div class="submit">
                     <div class="row">

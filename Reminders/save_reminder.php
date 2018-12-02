@@ -16,8 +16,10 @@ $user_id = $_SESSION['user_id'];
 $lng = $_POST["pickup_addresslng"];
 $lat = $_POST["pickup_addresslat"];
 $desc = $_POST["desc"];
+$details = $_POST["details"];
+$place = $_POST["place"];
 
-$sql = "INSERT INTO reminders (user_id,latitude,longitude,reminder_description) values('$user_id','$lat','$lng','$desc')";
+$sql = "INSERT INTO reminders (user_id,latitude,longitude,reminder_description,address_details,location) values('$user_id','$lat','$lng','$desc','$details','$place')";
 mysqli_query($conn, $sql);
 
 header("location: reminder.php"); 
