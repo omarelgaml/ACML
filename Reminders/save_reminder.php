@@ -20,7 +20,7 @@ $details = $_POST["details"];
 $place = $_POST["place"];
 
 $sql = "INSERT INTO reminders (user_id,latitude,longitude,reminder_description,address_details,location) values('$user_id','$lat','$lng','$desc','$details','$place')";
-mysqli_query($conn, $sql);
+mysqli_query($con, $sql);
 
 header("location: reminder.php"); 
 

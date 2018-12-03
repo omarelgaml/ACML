@@ -6,8 +6,9 @@ $password= $_POST['password'];
 $confirm = $_POST['confirm'];
 
 if($password==$confirm){
+
 $sql = "INSERT INTO users (name, email, password) values ('$name','$email','$password')";
-mysqli_query($conn, $sql);
+mysqli_query($con, $sql);
 header("location: login.php"); 
 }
 else{

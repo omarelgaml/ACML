@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (empty($_SESSION['user_id']) ) {
-    header("Location: login.php");
+   // header("Location: login.php");
 } else {
 $user_id = $_SESSION['user_id'];
 }
@@ -228,7 +228,16 @@ document.getElementById('place').value = place.name;
             
                     </div>
                   
-                  
+                   <div class="row">
+                         <div class="col-6">
+                   <div class="group">
+             <input  id="place" name="place" value="" class="form-control"  required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label id="req">Location</label>
+                            </div>
+                   </div>
+                                 </div>
                   
                   
                   
