@@ -1,0 +1,16 @@
+The config file called dbconn with extension php (dbconn.php) and it should be as follows :
+
+<?php
+
+define('DB_HOST', ['your host name']);
+define('DB_NAME', ['your database name']);
+define('DB_USER', ['your user name']);
+define('DB_PASSWORD', ['your user password']);
+
+$con=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, 3306) or die('Failed to connect to the database, died with error:');
+
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+} 
+
+?>
